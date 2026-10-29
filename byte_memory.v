@@ -7,7 +7,13 @@ module byte_memory(
     // Herein, implement D-Latch style memory
     // that stores the input data into memory
     // when store is high
-
+    
+    always @(data, store) begin
+        if (store)
+            memory <= data;
+    end
+    
+    
     // Memory should always output the value
     // stored, and it should only change
     // when store is high

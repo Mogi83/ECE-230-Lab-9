@@ -10,6 +10,7 @@ module d_latch(
     // E = 1, D = 1, Q is 1
     
     always @(D, E) begin
+        // if E is high (1) then we set Q to val D
         if (E)
             Q <= D;
     end
